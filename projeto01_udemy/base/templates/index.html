@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 01 - Udemy</title>
+</head>
+<body>
+    <h1>Essa é a página Index</h1>
+    <p>Aqui vai o texto normal.</p>
+
+    <h2>{{curso}}</h2>
+
+    <h3>{{texto2}}</h3>
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tBody>
+    {% for produto in produtos %}
+            <tr>
+                <td><a href="{% url 'produto' produto.id %}">{{produto.nome}}</a></td>
+                <td>{{produto.preco}}</td>
+            </tr>
+    {% endfor %}
+        </tBody>
+    </table>
+
+</body>
+</html>
